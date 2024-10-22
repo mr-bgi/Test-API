@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="student-form">
+        <div class="container ms-auto me-auto">
+            <h1 class="text-center pb-5">STUDENT INFORMATION</h1>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-primary btn-add d-flex justify-content-center align-items-center"
+                    data-bs-toggle="modal" data-bs-target="#addStudent">
+                    <img src="assets/img/add.png" alt="">
+                </button>
+                <div class="d-flex position-relative">
+                    <input type="search" name="" id="searchbox" class="form-control" onchange="searchData()" placeholder="Search here ...">
+                    <div class="img-icon bg-primary rounded-1" onclick="searchData()">
+                        <img src="assets/img/search.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row gy-4" id="row"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="addStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">ADD STUDENT</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="" id="createName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Title</label>
+                        <input type="text" class="form-control" name="" id="createTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" name="" id="createImage">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="CreateData()" data-bs-dismiss="modal" id="closeCreate">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editStudent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">ADD STUDENT</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="" id="updateName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Title</label>
+                        <input type="text" class="form-control" name="" id="updateTitle">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" name="" id="updateImage">
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="img-student">
+                            <img src="" alt="" id="currentImage">
+                        </div>
+                        <div class="data-student">
+                            <h3 id="oldname">Name</h3>
+                            <p id="oldclass">Title</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="UpdateData()" data-bs-dismiss="modal" id="closeUpdate">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
